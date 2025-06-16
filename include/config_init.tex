@@ -1,0 +1,219 @@
+% Define una geometría de página cuidada y adecuada para impresión
+\usepackage[DIV=12,BCOR=12mm,headinclude=true,footinclude=false]{typearea}
+
+%Para corregir los margenes de paginas pares e impares para impresion a dos caras. Sin esto salen al reves.
+\let\tmp\oddsidemargin
+\let\oddsidemargin\evensidemargin
+\let\evensidemargin\tmp
+\reversemarginpar
+
+%Para agrandar un poco el margen superior y empequeñecer el inferior, que me parecia estaban un poco descompensados
+\voffset=0.5cm
+
+% Añade al índice y numera hasta la profundidad 4.
+% 1:section,2:subsection,3:subsubsection,4:paragraph
+\setcounter{tocdepth}{4}
+\setcounter{secnumdepth}{4}
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+% BIBLIOGRAFÍA
+%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[numbers]{natbib}
+\usepackage{breakcites,notoccite}
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+% DOCUMENTO EN ESPAÑOL
+%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+
+%%%%%%%%%%%%%%%%%%%%%%%% 
+% COLORES
+%%%%%%%%%%%%%%%%%%%%%%%% 
+% Biblioteca de colores
+\usepackage{color}
+\usepackage[table,xcdraw,dvipsnames]{xcolor}
+% Otros colores definidos por el usuario
+\definecolor{gray97}{gray}{.97}
+\definecolor{gray75}{gray}{.75}
+\definecolor{gray45}{gray}{.45}
+\definecolor{gray30}{gray}{.30}
+\definecolor{negro}{RGB}{0,0,0}
+\definecolor{blanco}{RGB}{255,255,255}
+\definecolor{dkgreen}{rgb}{0,.6,0}
+\definecolor{dkblue}{rgb}{0,0,.6}
+\definecolor{dkyellow}{cmyk}{0,0,.8,.3}
+\definecolor{gray}{rgb}{0.5,0.5,0.5}
+\definecolor{mauve}{rgb}{0.58,0,0.82}
+\definecolor{deepblue}{rgb}{0,0,0.5}
+\definecolor{deepred}{rgb}{0.6,0,0}
+\definecolor{deepgreen}{rgb}{0,0.5,0}
+\definecolor{MyDarkGreen}{rgb}{0.0,0.4,0.0}
+\definecolor{bluekeywords}{rgb}{0.13,0.13,1}
+\definecolor{greencomments}{rgb}{0,0.5,0}
+\definecolor{redstrings}{rgb}{0.9,0,0}
+\definecolor{pantone293}{RGB}{35,91,168}
+
+%%%%%%%%%%%%%%%%%%%%%%%%
+% TABLAS
+%%%%%%%%%%%%%%%%%%%%%%%%
+% Paquetes para tablas
+\usepackage{longtable,booktabs,array,multirow,multicol,tabularx,ragged2e,array}
+\usepackage{graphicx}
+
+% Nuevos tipos de columna para tabla, se pueden utilizar como por ejemplo C{3cm} en la definición de columnas de la función tabular
+\newcolumntype{L}[1]{>{\raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{\centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{\raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+%%%%%%%%%%%%%%%%%%%%%%%% 
+% GRAFICAS y DIAGRAMAS 
+%%%%%%%%%%%%%%%%%%%%%%%% 
+% Paquete para todo tipo de gráficas, diagramas, modificación de imágenes, etc
+\usepackage{rotating}
+\usepackage{tikz,tikzpagenodes}
+\usetikzlibrary{tikzmark,calc,shapes.geometric,arrows, arrows.meta,backgrounds,shadings,shapes.arrows,shapes.symbols,shadows,positioning,fit,automata,patterns,intersections}
+
+
+\usepackage{pgfplots}
+\pgfplotsset{colormap/jet}
+\pgfplotsset{compat=newest} % Compatibilidad
+\usepgfplotslibrary{patchplots,groupplots,fillbetween,polar}
+\usepackage{pgfplotstable}
+
+%%%%%%%%%%%%%%%%%%%%%%%% 
+% FIGURAS, TABLAS, ETC 
+%%%%%%%%%%%%%%%%%%%%%%%% 
+\usepackage{subcaption} % Para poder realizar subfiguras
+\usepackage{caption} % Para aumentar las opciones de diseño
+% Nombres de figuras, tablas, etc, en negrita la numeración, todo con letra small
+\captionsetup{labelfont={bf,small},textfont=small}
+% Paquete para modificar los espacios arriba y abajo de una figura o tabla
+\usepackage{setspace}
+% Define el espacio tanto arriba como abajo de las figuras, tablas
+\setlength{\intextsep}{5mm}
+% Para ajustar tamaños de texto de toda una tabla o grafica
+% Uso: {\scalefont{0.8} \begin{...} \end{...} }
+\usepackage{scalefnt}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%% 
+% OTROS
+%%%%%%%%%%%%%%%%%%%%%%%%
+% Para hacer una pagina horizontal. Uso: \begin{landscape} xxxx \end{lanscape}
+\usepackage{lscape}
+% Para incluir paginas PDF. Uso:
+% \includepdf[pages={1}]{tuarchivo.pdf}
+\usepackage{pdfpages}
+% Para introducir url's con formato. Uso: \url{http://www.google.es}
+\usepackage{url}
+% Paquete que añade el hipervinculo en referencias dentro del documento, indice, etc
+% Se define sin bordes alrededor. Uso: \ref{tulabel}
+\usepackage[pdfborder={000}]{hyperref}
+\usepackage{float}
+\usepackage{placeins}
+\usepackage{afterpage}
+\usepackage{verbatim}
+
+%%%%%%%%%%%%%%%%%%%%%%%% 
+% GLOSARIOS
+%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[acronym,nonumberlist,toc]{glossaries}
+\usepackage{glossary-superragged}
+\newglossarystyle{modsuper}{%
+  \setglossarystyle{super}%
+  \renewcommand{\glsgroupskip}{}
+}
+\renewcommand{\glsnamefont}[1]{\textbf{#1}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%% 
+% MATEMÁTICAS Y ALGORITMOS
+%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{mathtools,amsthm,amsfonts,amssymb,bm,mathrsfs,nicefrac,upgreek,bigints}
+\usepackage[linesnumbered,ruled,vlined,spanish]{algorithm2e}
+
+%%%%%
+% PARÁMETROS DE FORMATO DE CODIGOS
+%%%%%
+% Puedes editar los formatos para ajustarlos a tu gusto
+\input{include/styles_prog.tex}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Frase celebre
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newenvironment{FraseCelebre}
+{\begin{list}{}{%
+      \setlength{\leftmargin}{0.5\textwidth}
+      % Desplazamos el inicio de
+      % los párrafos a la derecha la mitad
+      % de la anchura de la línea de texto.
+      % Puede que quieras cambiar esto
+      % por otra cantidad como '5cm'.
+      \setlength{\parsep}{0cm}
+      % La separación entre párrafos de la
+      % frase o de la fuente es normal, sin
+      % espacio extra.
+      \addtolength{\topsep}{0.5cm}
+      % Aumentamos un poco la separación
+      % entre la parte de la fase célebre
+      % y los párrafos de alrededor
+    }
+  }
+  {\unskip \end{list}}
+
+\newenvironment{Frase}%
+{\item \begin{flushright}\small\em}%
+  {\end{flushright}}
+
+\newenvironment{Fuente}%
+{\item \begin{flushright}\small}%
+  {\end{flushright}}
+
+\newenvironment{bottomparagraph}{\par\vspace*{\fill}}{\clearpage}
+
+% Para que las páginas en blanco no tengan numeración.
+\newcommand{\clearemptydoublepage}{\newpage{\pagestyle{empty}\cleardoublepage}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Configuración del español extra
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\addto\captionsspanish{%
+  \renewcommand{\listtablename}{Índice de tablas}
+  \renewcommand{\tablename}{Tabla}
+  \renewcommand{\lstlistingname}{Código}
+  \renewcommand{\lstlistlistingname}{Índice de Códigos}
+  \renewcommand{\glossaryname}{Glosario}
+  \renewcommand{\acronymname}{Acrónimos}
+  \renewcommand{\bibname}{Bibliografía}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Encabezados y demás
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+\fancyhf{} % limpia encabezado y pie
+
+% Encabezado izquierdo (páginas pares): capítulo
+\fancyhead[LE]{\scshape \leftmark}
+
+% Encabezado derecho (páginas impares): sección
+\fancyhead[RO]{\scshape \rightmark}
+
+% Línea horizontal en el encabezado
+\renewcommand{\headrulewidth}{0.2pt}
+
+% Número de página centrado en el pie
+\fancyfoot[C]{\thepage}
+
+% Redefinir \chaptermark para que \leftmark muestre "Capítulo N. Título"
+\renewcommand{\chaptermark}[1]{%
+  \markboth{\chaptername\ \thechapter.\ #1}{}}
+
+% Redefinir \sectionmark para que \rightmark muestre "N.M Sección"
+\renewcommand{\sectionmark}[1]{%
+  \markright{\thesection\ #1}}

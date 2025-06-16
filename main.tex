@@ -1,0 +1,130 @@
+% LaTeX Document Class for Doctoral Thesis
+% Universidad de Alcalá
+% Version 1.0
+%
+% Gracias a: Alvaro Quintanar, Macias, Javier, y a todos los que han colaborado
+% en la creación de este documento.
+
+% Modificado por: David Carrascal {david.carrascal@uah.es}
+
+\documentclass[11pt,a4paper,openright,twoside]{book}
+% JLD: Esta opcion corresponde al texto para publicar online
+%\documentclass[11pt,a4paper,openright]{book}
+
+\input{include/config_init}
+\input{include/vars.tex}
+
+%%%%%%%%%%%%%%%%%   Configuración adicional   %%%%%%%%%%%%%%%%%%
+
+% Información añadida a las propiedades del archivo PDF.
+\hypersetup{
+pdfauthor = {David Carrascal~(david.carrascal@uah.es)},
+pdftitle = {\titulotesis},
+colorlinks=true,     
+urlcolor=RoyalBlue,
+linkcolor=Black,
+filecolor=Black, 
+citecolor=RoyalBlue,
+}
+
+% Archivo de acrónimos
+\makeglossaries
+%\makenoidxglossaries 
+\input{body/acronyms.tex}
+
+
+
+%%%%%%%%%%%%%%%%%% INICIO DEL DOCUMENTO %%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+
+% Portada
+\input{include/cover/front.tex}
+
+\clearemptydoublepage
+
+% Cover
+\input{include/cover/cover.tex}
+
+\clearemptydoublepage
+
+% Ponemos el tamaño de letra a normal.
+\normalsize
+
+%DESCOMENTAR SI SE QUIEREN AÑADIR PDFs CON LOS INFORMES
+% \clearemptydoublepage
+% \includepdf[pages=1]{informes/informeDirector.pdf}
+% 
+% \clearemptydoublepage
+% \includepdf[pages=1]{letters/informeDepartamento.pdf}
+
+
+% Números romanos hasta el mainmatter.
+\frontmatter
+
+% Init
+\input{body/00_Preliminary/00_preliminaresconagradecimientos.tex}
+
+% Indices
+\cleardoublepage
+\phantomsection
+\pagestyle{empty}
+\addcontentsline{toc}{chapter}{Índice general}
+\tableofcontents
+
+\cleardoublepage
+\phantomsection
+\pagestyle{empty}
+\addcontentsline{toc}{chapter}{Índice de figuras}
+\listoffigures
+
+\cleardoublepage
+\phantomsection
+\pagestyle{empty}
+\addcontentsline{toc}{chapter}{Índice de tablas}
+\listoftables
+
+\cleardoublepage
+\phantomsection
+\pagestyle{empty}
+\addcontentsline{toc}{chapter}{Índice de algoritmos}
+\listofalgorithms
+
+%\cleardoublepage
+%\phantomsection
+%\addcontentsline{toc}{chapter}{Lista de Acrónimos}
+\pagestyle{empty}
+\printglossary[style=modsuper,type=\acronymtype,title={Lista de acrónimos}]
+
+% Inicia la numeración habitual
+\mainmatter
+
+\pagestyle{fancy}
+
+% Body
+\input{body/01_Intro/intro.tex}
+\input{body/02_Sota/sota.tex}
+\input{body/01_Intro/test.tex}
+
+%\input{body/capitulos/02_marcoteorico}
+%\input{body/capitulos/03_analisisPreimplementacion}
+%\input{body/capitulos/04_desarrollo}
+%\input{body/capitulos/05_conclusiones}
+
+% Biblio
+%\nocite{*}
+\bibliography{body/refs}
+\bibliographystyle{IEEEtran}
+
+
+% Anexos 
+%\appendix
+%\input{body/anexos/condiciones}
+%\input{body/anexos/presupuesto}
+%\input{body/anexos/manuales}
+
+
+% Contra portada
+%\includepdf[pages={4}]{include/portada/portada_uah_eps_MUIT_TFM.pdf}
+%\includepdf[pages={6}]{include/portada/portada_uah_eps_MUIT_TFM.pdf}
+
+\end{document}
