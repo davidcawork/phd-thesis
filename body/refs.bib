@@ -370,9 +370,275 @@ series = {CNIOT '21}
   organization={IEEE}
 }
 
+%% Propuestas in-band
 @ARTICLE{Sharma16,  
 author={Sharma, Sachin and Staessens, Dimitri and Colle, Didier and Pickavet, Mario and Demeester, Piet},  
 journal={IEEE Network},   
 title={{In-band control, queuing, and failure recovery functionalities for openflow}},   
 year={2016},  volume={30},  number={1},  pages={106-112},  doi={10.1109/MNET.2016.7389839}
+}
+
+@article{Goltsmann17,
+  title={{Towards a Resilient In-Band SDN Control Channel}},
+  author={Goltsmann, Polina and Zitterbart, Martina and Hecker, Arthur and Bless, Roland},
+  year={2017},
+  journal={Universit{\"a}t T{\"u}bingen}
+}
+
+@article{Khakhalin17,
+  title={{A reliable in-band control in a Software-Defined Network}},
+  author={Khakhalin, Anatoly S. and Chemeritskiy, Evgeny V.},
+  journal={Journal of Theoretical \& Applied Information Technology},
+  volume={95},
+  number={17},
+  year={2017}
+}
+
+@INPROCEEDINGS{Mohan18,  
+author={Mohan, Purnima Murali and Truong-Huu, Tram and Gurusamy, Mohan}, 
+booktitle={2018 10th International Conference on Communication Systems   Networks (COMSNETS)},   
+title={{Towards resilient in-band control path routing with malicious switch detection in SDN}},   
+year={2018},  volume={},  number={},  pages={9-16},  doi={10.1109/COMSNETS.2018.8328174}
+}
+
+@INPROCEEDINGS{Raza17,  
+author={Raza, Ali and Gohar, Ali and Lee, Sanghwan},  
+booktitle={2017 International Conference on Information and Communication Technology Convergence (ICTC)},   
+title={{MPTCP based in-band controlling for the software defined networks}},   
+year={2017},  volume={},  number={},  pages={163-167},  doi={10.1109/ICTC.2017.8190965}
+}
+
+@INPROCEEDINGS{Gonzalez18,  
+author={González, Sergio and De la Oliva, Antonio and Bernardos, Carlos J. and Contreras, Luis M.},  
+booktitle={2018 IEEE International Symposium on Broadband Multimedia Systems and Broadcasting (BMSB)},   
+title={{Towards a Resilient Openflow Channel Through MPTCP}},   
+year={2018},  volume={},  number={},  pages={1-5},  doi={10.1109/BMSB.2018.8436865}
+}
+
+@ARTICLE{Gorkemli18,  
+author={G\"orkemli, Burak and Tatlıcıo\u{g}lu, Sinan and Tekalp, A. Murat and Civanlar, Seyhan and Lokman, Erhan},  
+journal={IEEE Journal on Selected Areas in Communications},   
+title={{Dynamic Control Plane for SDN at Scale}},   
+year={2018},  volume={36},  number={12},  pages={2688-2701},  doi={10.1109/JSAC.2018.2871308}
+}
+
+@INPROCEEDINGS{Holzmann19,  
+author={Holzmann, Polina and Zitterbart, Martina},  
+booktitle={2019 IEEE 44th LCN Symposium on Emerging Topics in Networking (LCN Symposium)},   
+title={{Izzy: A Distributed Routing Protocol for In-band SDN Control Channel Connectivity}},   
+year={2019},  volume={},  number={},  pages={18-25},  doi={jt8q}
+}
+
+
+@INPROCEEDINGS{Ningyuan21,  
+author={Ningyuan, Wang and Chen, Dong and Liang, Liu and Wang, Mian and Bingyuan, Liang},  
+booktitle={2021 IEEE 6th International Conference on Computer and Communication Systems (ICCCS)},   
+title={{An SDN Based Highly Reliable in-Band Control Framework for LEO Mega-Constellations}},  
+year={2021},  volume={},  number={},  pages={970-975},  doi={10.1109/ICCCS52626.2021.9449244}
+}
+
+@InProceedings{Kumazoe22,
+author="Kumazoe, Kazumi
+and Shibata, Masahiro
+and Tsuru, Masato",
+editor="Barolli, Leonard
+and Miwa, Hiroyoshi",
+title={{A P4 BMv2-Based Feasibility Study on a Dynamic In-Band Control Channel for SDN}},
+booktitle="Advances in Intelligent Networking and Collaborative Systems",
+year="2022",
+publisher="Springer International Publishing",
+address="Cham",
+pages="442--451",
+abstract="Software Defined Networking (SDN) enables flexible and dynamic control of packet forwarding and processing by decoupling the control plane and the data plane. However, to implement an efficient and reliable in-band SDN control channel to connect controller(s) and switch/router(s), conventional static schemes such as VLAN are insufficient especially in highly utilized and/or network-topology variable wireless networks. Therefore, a dynamic in-band control channel is considered which can piggyback (embed) control messages onto data packets flowing on the network. In this paper, we report a feasibility study on the dynamic in-band control channel implemented on the BMv2 router in Programming Protocol Independent Packet Processors (P4) framework. The adverse impact on the data plane performance is experimentally investigated. It is found that the TCP goodput and packet loss characteristics are degraded as the amount of embedded information increases but the significant impact comes from not embedding/extracting the control information on data packets but sending the extracted information to a controller; which give us hints to applicable conditions and possible improvements on the dynamic in-band control channel implementation.",
+isbn="978-3-031-14627-5"
+}
+
+@INPROCEEDINGS{Sharma13,  
+author={Sharma, Sachin and Staessens, Dimitri and Colle, Didier and Pickavet, Mario and Demeester, Piet},  booktitle={2013 19th IEEE Workshop on Local \& Metropolitan Area Networks (LANMAN)},   title={Automatic bootstrapping of OpenFlow networks},   year={2013},  volume={},  number={},  pages={1-6},  doi={10.1109/LANMAN.2013.6528283}
+}
+
+@inproceedings{Tu14,
+author = {Tu, Cheng-Chun and Wang, Pai-Wei and Chiueh, Tzi-cker},
+title = {{In-Band Control for an Ethernet-Based Software-Defined Network}},
+year = {2014},
+isbn = {9781450329200},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/2611354.2611359},
+doi = {10.1145/2611354.2611359},
+abstract = {A distinguishing characteristic of a software-defined network is separation of the network's control plane from its data plane. Especially when the granularity of control is an individual network flow, such separation entails frequent communications between these two planes. This communication pattern demands the same level of resilience from the control plane as that from the data plane, and thus calls into question the conventional out-of-band control network design as used in many existing SDN systems. Peregrine is an Ethernet-based software-defined network that was originally designed as the internal network of a container computer, and unifies storage access, inter-server communication, and network control into a single network comprising only commodity off-the-shelf Ethernet switches. To fully utilize all available physical network links, Peregrine treats the physical network as an explicitly routed mesh and equalizes the loads of its links using a global load-balancing routing algorithm running on a centralized controller. The in-band control architecture of Peregrine leads to two issues: (1) how to evolve a Peregrine network from its initial bootstrapping mode to the explicit routing mode at run time, and (2) how to support fast fail-over for physical failures that break both the control and data plane. This paper describes how Peregrine addresses these two issues, and shows its effectiveness with performance measurements collected from a fully operational test-bed.},
+booktitle = {Proceedings of International Conference on Systems and Storage},
+pages = {1–11},
+numpages = {11},
+location = {Haifa, Israel},
+series = {SYSTOR 2014}
+}
+
+@INPROCEEDINGS{Su17,  
+author={Su, Yu-Lun and Wang, I-Chih and Hsu, Yao-Tsung and Wen, Charles H.-P.},  
+booktitle={GLOBECOM 2017 - 2017 IEEE Global Communications Conference},  
+title={{FASIC: A Fast-Recovery, Adaptively Spanning In-Band Control Plane in Software-Defined Network}},   year={2017},  volume={},  number={},  pages={1-6},  doi={10.1109/GLOCOM.2017.8254760}
+}
+
+@inproceedings{Sakic20,
+author = {Sakic, Ermin and Avdic, Mirza and Van Bemten, Amaury and Kellerer, Wolfgang},
+title = {{Automated Bootstrapping of A Fault-Resilient In-Band Control Plane}},
+year = {2020},
+isbn = {9781450371018},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3373360.3380829},
+doi = {10.1145/3373360.3380829},
+booktitle = {Proceedings of the Symposium on SDN Research},
+pages = {1–13},
+numpages = {13},
+keywords = {Software Defined Networking, network bootstrapping, distributed control plane},
+location = {San Jose, CA, USA},
+series = {SOSR '20}
+}
+
+@INPROCEEDINGS{Wu21,  
+author={Wu, Fan and Tian, Aleteng},  
+booktitle={2021 International Conference on Communications, Information System and Computer Engineering (CISCE)},   
+title={{rXstp: A Topology Discovery Mechanism Based on Rapid Spanning Tree for SDN In-Band Control}},   
+year={2021},  volume={},  number={},  pages={703-706},  doi={10.1109/CISCE52179.2021.9446027}
+}
+
+
+@INPROCEEDINGS{Silva-Freitas20,  
+author={Silva Freitas, Marcelo and Oliveira, Romerson and Molinos, Diego and Melo, Juliano and Frosi Rosa, Pedro and de Oliveira Silva, Flavio},  
+booktitle={2020 International Conference on Information Networking (ICOIN)},   
+title={{ConForm: In-band Control Plane Formation Protocol to SDN-Based Networks}},   
+year={2020},  volume={},  number={},  pages={574-579},  doi={10.1109/ICOIN48656.2020.9016580}
+}
+
+@ARTICLE{Li21,  
+author={Li, Chien-Yung and Yen, Li-Hsing and Chi, Kuang-Hui and Tseng, Chien-Chao},  
+journal={IEEE Access},   
+title={{One-Pass In-Band Automatic Bootstrapping for OpenFlow Switches}},   
+year={2021},  volume={9},  number={},  pages={153349-153359},  doi={10.1109/ACCESS.2021.3125716}
+}
+
+@INPROCEEDINGS{Asadujjaman18,  
+author={Asadujjaman, A. S. M. and Rojas, Elisa and Alam, Mohammad Shah and Majumdar, Suryadipta},  
+booktitle={2018 4th IEEE Conference on Network Softwarization and Workshops (NetSoft)},   
+title={{Fast Control Channel Recovery for Resilient In-band OpenFlow Networks}},   
+year={2018},  volume={},  number={},  pages={19-27},  doi={10.1109/NETSOFT.2018.8460079}
+}
+
+@ARTICLE{Lopez-Pajares19,  
+author={Lopez-Pajares, Diego and Alvarez-Horcajo, Joaquin and Rojas, Elisa and Asadujjaman, A. S. M. and Martinez-Yelmo, Isaias},  journal={IEEE Access},   
+title={{Amaru: Plug\&Play Resilient In-Band Control for SDN}},   
+year={2019},  volume={7},  number={},  pages={123202-123218},  doi={10.1109/ACCESS.2019.2937528}
+}
+
+@inproceedings{Schiff15,
+          author = {Liron Schiff and Stefan Schmid and Marco Canini},
+       booktitle = {ACM Sigcomm Symposium on SDN Research (SOSR)},
+           title = {{Medieval: Towards A Self-Stabilizing, Plug \& Play, In-Band SDN Control Network}},
+            year = {2015},
+        abstract = {To provide high availability and fault-tolerance, SDN control
+planes should be distributed. However, distributed control
+planes are challenging to design and bootstrap, especially if
+this is done in-band, without a dedicated control network,
+and without relying on legacy protocols. We present Medieval,
+a plug \& play, distributed control plane that supports
+automatic topology discovery and management, as well as
+flexible control plane membership: controllers can be added
+and removed dynamically. Medieval comes with interesting
+robustness guarantees and is provably self-stabilizing: from
+any initial topology, the controllers quickly self-organize
+and establish a communication channel among themselves.
+Given the resulting managed control plane, arbitrary network
+control services can be implemented on top. Interestingly,
+Medieval is also self-reliant, in the sense that it is
+based on OpenFlow only, and does not require any legacy
+protocol to bootstrap.},
+             url = {http://eprints.cs.univie.ac.at/5745/}
+}
+
+@inproceedings{Schiff16-2,
+  title={{Ground control to major faults: Towards a fault tolerant and adaptive SDN control network}},
+  author={Schiff, Liron and Schmid, Stefan and Canini, Marco},
+  booktitle={2016 46th Annual IEEE/IFIP International Conference on Dependable Systems and Networks Workshop (DSN-W)},
+  pages={90--96},
+  year={2016},
+  organization={IEEE},
+  doi={10.1109/DSN-W.2016.48}
+}
+
+@article{Schiff16,
+author = {Schiff, Liron and Schmid, Stefan and Kuznetsov, Petr},
+title = {{In-Band Synchronization for Distributed SDN Control Planes}},
+year = {2016},
+issue_date = {January 2016},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+volume = {46},
+number = {1},
+issn = {0146-4833},
+url = {https://doi.org/10.1145/2875951.2875957},
+doi = {10.1145/2875951.2875957},
+journal = {SIGCOMM Comput. Commun. Rev.},
+month = "January",
+pages = {37–43},
+numpages = {7},
+keywords = {distributed control planes, software-defined networking, in-band mechanisms}
+}
+
+@INPROCEEDINGS{Canini18,  
+author={Canini, Marco and Salem, Iosif and Schiff, Liron and Schiller, Elad Michael and Schmid, Stefan},  
+booktitle={2018 IEEE 38th International Conference on Distributed Computing Systems (ICDCS)},   
+title={{Renaissance: A Self-Stabilizing Distributed SDN Control Plane}},   
+year={2018},  volume={},  number={},  pages={233-243},  doi={10.1109/ICDCS.2018.00032}
+}
+
+@article{Canini22,
+title = {{Renaissance: A self-stabilizing distributed SDN control plane using in-band communications}},
+journal = {Journal of Computer and System Sciences},
+volume = {127},
+pages = {91-121},
+year = {2022},
+issn = {0022-0000},
+doi = {https://doi.org/10.1016/j.jcss.2022.02.001},
+url = {https://www.sciencedirect.com/science/article/pii/S0022000022000150},
+author = {Marco Canini and Iosif Salem and Liron Schiff and Elad M. Schiller and Stefan Schmid},
+keywords = {SDN, Distributed control plane, Self-stabilization},
+abstract = {By introducing programmability, automated verification, and innovative debugging tools, Software-Defined Networks (SDNs) are poised to meet the increasingly stringent dependability requirements of today's communication networks. However, the design of fault-tolerant SDNs remains an open challenge. This paper considers the design of dependable SDNs through the lenses of self-stabilization—a very strong notion of fault-tolerance. In particular, we develop algorithms for an in-band and distributed control plane for SDNs, called Renaissance, which tolerate a wide range of failures. Our self-stabilizing algorithms ensure that after the occurrence of arbitrary failures, (i) every non-faulty SDN controller can reach any switch (or another controller) within a bounded communication delay (in the presence of a bounded number of failures) and (ii) every switch is managed by a controller. We evaluate Renaissance through a rigorous worst-case analysis as well as a prototype implementation (based on OVS and Floodlight, and Mininet).}
+}
+
+@inproceedings{gorkemli2016dynamic,
+  title={{Dynamic management of control plane performance in software-defined networks}},
+  author={G{\"o}rkemli, Burak and Parlak{\i}{\c{s}}{\i}k, A Murat and Civanlar, Seyhan and Ula{\c{s}}, Ayd{\i}n and Tekalp, A Murat},
+  booktitle={2016 IEEE NetSoft Conference and Workshops (NetSoft)},
+  pages={68--72},
+  year={2016},
+  organization={IEEE}
+}
+
+@INPROCEEDINGS{Hark17,  
+author={Hark, Rhaban and Rizk, Amr and Richerzhagen, Nils and Richerzhagen, Björn and Steinmetz, Ralf},  
+booktitle={2017 IFIP Networking Conference (IFIP Networking) and Workshops},   
+title={{Isolated in-band communication for distributed SDN controllers}},   
+year={2017},  volume={},  number={},  pages={1-2},  doi={jvb5}
+}
+
+@INPROCEEDINGS{Canini17,  
+author={Canini, Marco and Salem, Iosif and Schiff, Liron and Schiller, Elad M. and Schmid, Stefan},  
+booktitle={2017 IEEE 37th International Conference on Distributed Computing Systems (ICDCS)},   
+title={{A Self-Organizing Distributed and In-Band SDN Control Plane}},   
+year={2017},  volume={},  number={},  pages={2656-2657},  doi={10.1109/ICDCS.2017.328}
+}
+
+@INPROCEEDINGS{Kwan-Yee18,  
+author={Chan, Kwan-Yee and Chen, Chen-Hua and Chen, Yi-Huei and Tsai, Yun-Ju and Lee, Steven S. W. and Wu, Cheng-Shong},  
+booktitle={2018 International Conference on Information and Communication Technology Convergence (ICTC)},   
+title={{Fast Failure Recovery for In-Band Controlled Multi-Controller OpenFlow Networks}},   
+year={2018},  volume={},  number={},  pages={396-401},  doi={10.1109/ICTC.2018.8539715}
+}
+
+@INPROCEEDINGS{Holzmann18,  
+author={Holzmann, Polina and Hecker, Artur and Zitterbart, Martina},  booktitle={2018 IEEE Globecom Workshops (GC Wkshps)},   
+title={Towards a Distributed Routing Protocol for In-Band Control Channel with Elastic Controller Clusters},   
+year={2018},  volume={},  number={},  pages={1-6},  doi={10.1109/GLOCOMW.2018.8644346}
 }
