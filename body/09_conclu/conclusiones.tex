@@ -1,0 +1,38 @@
+\chapter{Conclusiones y trabajo futuro}
+\label{ch:conclusiones}
+
+Este capítulo final sintetiza las principales contribuciones desarrolladas a lo largo de la Tesis Doctoral, recogidas en los Capítulos~\ref{ch:propuestaInband}, \ref{ch:den2ne}, \ref{ch:fault_sg}, \ref{ch:bloste} y \ref{ch:datadriven}, así como las conclusiones fundamentales derivadas de varios años de investigación. Asimismo, se presentan las posibles líneas de trabajo futuro que surgen de los resultados alcanzados, orientadas a ampliar, validar y trasladar los avances propuestos hacia nuevos escenarios de aplicación. En consecuencia, este epígrafe ofrece una visión de conjunto que no solo pone en valor los logros obtenidos, sino que también sienta las bases para que otros investigadores puedan dar continuidad y proyección a esta línea de trabajo. 
+
+\section{Conclusiones generales}
+
+La presente Tesis Doctoral ha abordado de manera sistemática los huecos identificados en el Estado del Arte y sintetizados en el Capítulo~\ref{ch:problema}, proponiendo y validando un conjunto de soluciones innovadoras orientadas a redes programables, \gls{sg} y arquitecturas \gls{iiot}. A continuación, se resumen las principales contribuciones y conclusiones de cada capítulo, destacando cómo han contribuido al cumplimiento de los objetivos establecidos.\\
+\\
+En primer lugar, en el Capítulo~\ref{ch:propuestaInband} se presentó \texttt{win-BOFUSS}, una extensión del switch de referencia \gls{bofuss} con soporte para control \textit{in-band}. Esta propuesta se orientó a dispositivos IoT con recursos restringidos y demostró su idoneidad gracias a un protocolo ligero, resiliente y eficiente en la gestión de rutas de control. Se alcanzaron mecanismos de respaldo que garantizan continuidad de servicio, estableciendo una primera contribución sólida hacia el despliegue práctico de mecanismos de control \textit{in-band} en entornos heterogéneos y densos.\\
+\\
+En segundo lugar, el Capítulo~\ref{ch:den2ne} introdujo el algoritmo \gls{d2e}, concebido para la gestión eficiente de recursos en redes densas multi-hop mediante etiquetado jerárquico. Los resultados de evaluación confirmaron su escalabilidad (hasta 200 nodos) y tiempos de convergencia reducidos (inferiores a 20 ms). Con ello, se sentaron las bases para estrategias de encaminamiento y planificación de recursos ligeras y adaptables, en línea directa con el primer bloque de objetivos de la Tesis.\\
+\\
+En tercer lugar, en el Capítulo~\ref{ch:fault_sg} se propuso un enfoque de reconfiguración proactiva en \gls{sg} apoyado en técnicas de \gls{ml}/\gls{dl}. Aprovechando conjuntos de datos reales y simulados, se demostró la viabilidad de predecir fallos y desencadenar procesos de reconfiguración robustos. Entre los modelos evaluados, destacó Random Forest optimizado con \gls{rfecv}, que alcanzó una precisión superior al 94\% y una capacidad de detección equilibrada, reduciendo las falsas alarmas. Esta aportación permitió validar el papel de la inteligencia artificial como motor de resiliencia en sistemas energéticos críticos.\\
+\\
+En cuarto lugar, el Capítulo~\ref{ch:bloste} presentó el algoritmo \gls{blo}, diseñado para el encaminamiento adaptativo de energía en redes de distribución malladas. Mediante un exhaustivo análisis con más de 148\,000 simulaciones sobre topologías de referencia, se comprobó la eficacia de criterios multicriterio flexibles, con especial relevancia del criterio \textit{Power2Zero}. La escalabilidad y la eficiencia computacional de \gls{blo} se confirmaron incluso en topologías de hasta 2500 nodos, consolidando esta propuesta como una herramienta práctica para la gestión energética en redes de distribución modernas.\\
+\\
+Finalmente, en el Capítulo~\ref{ch:datadriven} se desarrolló una arquitectura contenerizada para \gls{iiot} que integra telemetría, inferencia y control en un marco unificado. La evaluación experimental mostró que la propuesta permite ciclos de reconfiguración inferiores al segundo, con despliegue rápido y uso eficiente de recursos bajo condiciones de carga elevada. Además, su carácter abierto y reproducible aporta valor tanto científico como industrial, reforzando su potencial para aplicaciones de la Industria 4.0.\\
+\\
+En conjunto, los resultados obtenidos en todos los capítulos de esta Tesis Doctoral confirman el cumplimiento de los dos bloques de objetivos planteados: (i) diseñar y validar mecanismos de control, encaminamiento y gestión de recursos prácticos y escalables para redes programables y su extensión a \gls{iiot} y \gls{sg}; y (ii) proponer arquitecturas software abiertas y reproducibles que integren monitorización, inferencia y orquestación, habilitando la toma de decisiones automáticas y resilientes en entornos reales.
+
+\section{Líneas de trabajo futuro}
+
+El trabajo desarrollado en esta Tesis abre diversas oportunidades de investigación que pueden ampliar y profundizar los resultados obtenidos:
+
+\begin{itemize}
+    \item \textbf{Ampliación de mecanismos \textit{in-band}}: extender el protocolo \texttt{win-BOFUSS} a otros switches de referencia y plataformas hardware, así como evaluar su interoperabilidad con controladores SDN de nueva generación, explorando su integración con mecanismos de seguridad ligera y criptografía eficiente.
+    
+    \item \textbf{Evolución del algoritmo \gls{d2e}}: incorporar criterios de asignación dinámicos basados en aprendizaje reforzado, así como validaciones en entornos físicos heterogéneos (incluyendo redes inalámbricas de baja potencia y escenarios vehiculares).
+    
+    \item \textbf{Predicción y resiliencia en \gls{sg}}: expandir el uso de modelos de \gls{ai}/\gls{ml} hacia enfoques federados que permitan preservar privacidad de datos en cooperativas energéticas, así como evaluar el impacto de la incorporación de \textit{digital twins} para validación en tiempo real.
+    
+    \item \textbf{Optimización de \gls{blo}}: explorar nuevas métricas multicriterio que integren sostenibilidad, coste económico y seguridad, además de realizar validaciones en escenarios de red con penetración masiva de renovables y generación distribuida.
+    
+    \item \textbf{Consolidación de la arquitectura \gls{iiot} basada en datos}: evolucionar hacia despliegues híbridos multi-cloud, incorporar soporte nativo para federated learning y evaluar la escalabilidad en entornos industriales reales de gran tamaño. Se propone también la ampliación de los datasets y la integración con plataformas de estandarización de la industria.
+\end{itemize}
+
+En definitiva, esta Tesis Doctoral sienta unas bases sólidas para el desarrollo de mecanismos de control, gestión y orquestación resilientes, escalables y abiertos en redes programables, \gls{sg} y arquitecturas \gls{iiot}. Las líneas futuras aquí planteadas constituyen una hoja de ruta clara para continuar avanzando en la consolidación de soluciones científicas y tecnológicas que favorezcan la digitalización, autonomía y sostenibilidad de las infraestructuras críticas.
